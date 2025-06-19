@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CitizenAI Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-chart-bar"></i> Feedback Dashboard</h1>
+            <p>Analyzing citizen feedback in real-time</p>
+        </div>
+        
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h2><i class="fas fa-heart"></i> Sentiment Analysis</h2>
+                <div class="chart-container">
+                    <canvas id="sentimentChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <h2><i class="fas fa-tags"></i> Top Categories</h2>
+                <div class="chart-container">
+                    <canvas id="categoriesChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <h2><i class="fas fa-clock"></i> Recent Feedback</h2>
+                <div id="recent-feedback"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
