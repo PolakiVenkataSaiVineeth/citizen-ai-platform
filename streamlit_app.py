@@ -1,30 +1,17 @@
+# streamlit_app.py — with correct nltk punkt fix
 import nltk
 
-# Ensure required NLTK data (use actual resource names)
-nltk_required = ['punkt', 'vader_lexicon', 'stopwords']
-for item in nltk_required:
-    try:
-        nltk.download(item)
-    except:
-        pass  # Allow fallback, avoid crashing
+# ✅ Force proper punkt handling without using punkt_tab
+nltk.download('punkt')
+nltk.download('vader_lexicon')
+nltk.download('stopwords')
 
-
-# streamlit_app.py — Converted from Flask to Streamlit
 import streamlit as st
 import json
 import os
 from datetime import datetime
 from utils.sentiment import analyze_sentiment
 from utils.nlu_handler import process_nlu
-
-# Ensure NLTK data is available (runtime-safe for Streamlit Cloud)
-import nltk
-nltk_packages = ['punkt', 'vader_lexicon', 'stopwords']
-for package in nltk_packages:
-    try:
-        nltk.data.find(f'tokenizers/{package}' if package == 'punkt' else f'corpora/{package}')
-    except LookupError:
-        nltk.download(package)
 
 # Data file path
 data_dir = os.path.join(os.path.dirname(__file__), 'data')
