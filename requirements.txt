@@ -1,4 +1,7 @@
 flask>=2.3.3
-textblob==0.17.1
-nltk
 gunicorn
+textblob
+nltk
+ibm-watson>=6.0.0
+ibm-cloud-sdk-core>=3.16.6
+ibm-generative-ai
