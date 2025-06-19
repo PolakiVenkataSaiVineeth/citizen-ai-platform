@@ -1,3 +1,14 @@
+import nltk
+
+# Ensure required NLTK data (use actual resource names)
+nltk_required = ['punkt', 'vader_lexicon', 'stopwords']
+for item in nltk_required:
+    try:
+        nltk.download(item)
+    except:
+        pass  # Allow fallback, avoid crashing
+
+
 # streamlit_app.py — Converted from Flask to Streamlit
 import streamlit as st
 import json
