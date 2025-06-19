@@ -1,0 +1,41 @@
+[
+    {
+        "text": "is this it ?\n",
+        "sentiment": {
+            "score": 0.0,
+            "label": "neutral"
+        },
+        "nlu_results": {
+            "entities": [],
+            "keywords": [],
+            "categories": []
+        },
+        "timestamp": "2025-06-19T18:34:59.591261"
+    },
+    {
+        "text": "i love how this app is working actually , thanks for letting me do this project. <3!",
+        "sentiment": {
+            "score": 0.0,
+            "label": "neutral"
+        },
+        "nlu_results": {
+            "entities": [],
+            "keywords": [],
+            "categories": []
+        },
+        "timestamp": "2025-06-19T18:38:37.292478"
+    },
+    {
+        "text": "i hate this... >/\n",
+        "sentiment": {
+            "score": 0.0,
+            "label": "neutral"
+        },
+        "nlu_results": {
+            "entities": [],
+            "keywords": [],
+            "categories": []
+        },
+        "timestamp": "2025-06-19T18:39:07.028491"
+    }
+]
