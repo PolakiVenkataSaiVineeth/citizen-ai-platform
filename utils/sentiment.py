@@ -1,6 +1,14 @@
 from textblob import TextBlob
 import re
 
+import nltk
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
+
 def analyze_sentiment(text):
     if not text:
         return {
